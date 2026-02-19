@@ -1,0 +1,6 @@
+@KafkaDebeziumCdc.Api_HostAddress = http://localhost:5062
+
+GET {{KafkaDebeziumCdc.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

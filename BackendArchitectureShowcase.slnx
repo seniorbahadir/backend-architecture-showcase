@@ -1,0 +1,59 @@
+<Solution>
+  <Folder Name="/showcase/" />
+  <Folder Name="/showcase/01-auth-system/" />
+  <Folder Name="/showcase/01-auth-system/src/">
+    <Project Path="showcase/01-auth-system/src/AuthSystem.Api/AuthSystem.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/01-auth-system/tests/">
+    <Project Path="showcase/01-auth-system/tests/AuthSystem.Tests/AuthSystem.Tests.csproj" />
+  </Folder>
+  <Folder Name="/showcase/02-refresh-token-rotation/" />
+  <Folder Name="/showcase/02-refresh-token-rotation/src/">
+    <Project Path="showcase/02-refresh-token-rotation/src/RefreshTokenRotation.Api/RefreshTokenRotation.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/02-refresh-token-rotation/tests/">
+    <Project Path="showcase/02-refresh-token-rotation/tests/RefreshTokenRotation.Tests/RefreshTokenRotation.Tests.csproj" />
+  </Folder>
+  <Folder Name="/showcase/03-rabbitmq-messaging/" />
+  <Folder Name="/showcase/03-rabbitmq-messaging/src/">
+    <Project Path="showcase/03-rabbitmq-messaging/src/RabbitMqMessaging.Api/RabbitMqMessaging.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/03-rabbitmq-messaging/tests/">
+    <Project Path="showcase/03-rabbitmq-messaging/tests/RabbitMqMessaging.Tests/RabbitMqMessaging.Tests.csproj" />
+  </Folder>
+  <Folder Name="/showcase/04-kafka-debezium-cdc/" />
+  <Folder Name="/showcase/04-kafka-debezium-cdc/src/">
+    <Project Path="showcase/04-kafka-debezium-cdc/src/KafkaDebeziumCdc.Api/KafkaDebeziumCdc.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/04-kafka-debezium-cdc/tests/">
+    <Project Path="showcase/04-kafka-debezium-cdc/tests/KafkaDebeziumCdc.Tests/KafkaDebeziumCdc.Tests.csproj" />
+  </Folder>
+  <Folder Name="/showcase/05-audit-consumer-mongo/" />
+  <Folder Name="/showcase/05-audit-consumer-mongo/src/">
+    <Project Path="showcase/05-audit-consumer-mongo/src/AuditConsumerMongo.Api/AuditConsumerMongo.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/05-audit-consumer-mongo/tests/">
+    <Project Path="showcase/05-audit-consumer-mongo/tests/AuditConsumerMongo.Tests/AuditConsumerMongo.Tests.csproj" />
+  </Folder>
+  <Folder Name="/showcase/06-redis-caching/" />
+  <Folder Name="/showcase/06-redis-caching/src/">
+    <Project Path="showcase/06-redis-caching/src/RedisCaching.Api/RedisCaching.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/06-redis-caching/tests/">
+    <Project Path="showcase/06-redis-caching/tests/RedisCaching.Tests/RedisCaching.Tests.csproj" />
+  </Folder>
+  <Folder Name="/showcase/07-websocket-realtime/" />
+  <Folder Name="/showcase/07-websocket-realtime/src/">
+    <Project Path="showcase/07-websocket-realtime/src/WebSocketRealtime.Api/WebSocketRealtime.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/07-websocket-realtime/tests/">
+    <Project Path="showcase/07-websocket-realtime/tests/WebSocketRealtime.Tests/WebSocketRealtime.Tests.csproj" />
+  </Folder>
+  <Folder Name="/showcase/08-payments-integration/" />
+  <Folder Name="/showcase/08-payments-integration/src/">
+    <Project Path="showcase/08-payments-integration/src/PaymentsIntegration.Api/PaymentsIntegration.Api.csproj" />
+  </Folder>
+  <Folder Name="/showcase/08-payments-integration/tests/">
+    <Project Path="showcase/08-payments-integration/tests/PaymentsIntegration.Tests/PaymentsIntegration.Tests.csproj" />
+  </Folder>
+</Solution>
