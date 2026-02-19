@@ -21,7 +21,16 @@ It focuses on:
 All examples reflect production-oriented design decisions.
 
 ---
-
+flowchart LR
+  Client --> Gateway
+  Gateway --> Auth
+  Gateway --> Service
+  Service --> SQL
+  SQL --> Debezium
+  Debezium --> Kafka
+  Kafka --> AuditConsumer
+  AuditConsumer --> Mongo
+  
 ## Architecture Principles
 
 - Clean layering (API / Application / Domain / Infrastructure)
