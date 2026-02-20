@@ -1,127 +1,47 @@
 # Backend Architecture Showcase
 
-Production-grade backend architecture examples built with .NET, focusing on reliability, security, and event-driven design.
+Production-grade backend architecture showcase built with .NET, focused on authentication, event-driven systems, audit pipelines, and reliability patterns.
 
-This repository demonstrates real-world backend patterns including authentication systems, event-driven messaging, distributed caching, audit pipelines, and clean architectural layering.
+This repository serves as a structured engineering portfolio demonstrating backend system design principles used in modern distributed applications.
 
 ---
 
 ## Purpose
 
-This repository exists to showcase backend engineering practices used in modern distributed systems.
+The goal of this repository is to showcase how production-ready backend systems are designed, structured, and implemented.
 
 It focuses on:
 
-- clean architecture
-- event-driven communication
-- secure authentication flows
-- reliable data handling
-- observable and maintainable backend systems
+- authentication and session management
+- event-driven communication between services
+- distributed caching strategies
+- audit and event pipelines
+- clean architecture and maintainable system design
+- reliability, observability, and failure-safe patterns
 
-All examples reflect production-oriented design decisions.
+This repository is intentionally structured as an engineering showcase rather than a single application.
 
 ---
+
+## Architecture Overview
+
+```mermaid
 flowchart LR
-  Client --> Gateway
-  Gateway --> Auth
-  Gateway --> Service
-  Service --> SQL
-  SQL --> Debezium
-  Debezium --> Kafka
-  Kafka --> AuditConsumer
-  AuditConsumer --> Mongo
-  
-## Architecture Principles
 
-- Clean layering (API / Application / Domain / Infrastructure)
-- Explicit contracts between layers
-- Stateless services where possible
-- Idempotent operations
-- Failure-safe design
-- Observability and auditability
-- Security-first authentication flows
+Client --> Gateway[API Gateway]
 
----
+Gateway --> AuthService[Auth Service]
+Gateway --> AppService[Application Service]
 
-## Technology Stack
+AuthService --> SQL[(SQL Server)]
+AppService --> SQL
 
-**Backend**
-- .NET
-- ASP.NET Core Web API
-- Background Workers
+SQL --> Debezium[Debezium CDC]
+Debezium --> Kafka[(Kafka)]
 
-**Messaging & Streaming**
-- RabbitMQ
-- Kafka
-- Debezium (CDC)
+Kafka --> AuditConsumer[Audit Consumer]
 
-**Caching**
-- Redis
+AuditConsumer --> Mongo[(MongoDB)]
 
-**Databases**
-- SQL Server
-- MongoDB
-- PostgreSQL
-
-**Authentication**
-- JWT
-- Refresh Token Rotation
-- OTP-based authentication
-
-**Real-time Communication**
-- WebSocket
-
-**Infrastructure**
-- Docker
-- Docker Compose
-
----
-
-## Included Examples
-
-### Authentication System
-Demonstrates secure authentication flows including:
-
-- JWT issuance and validation
-- Refresh token rotation
-- secure session lifecycle management
-
----
-
-### Event-Driven Messaging
-Demonstrates event-driven architecture using:
-
-- RabbitMQ publishers and consumers
-- reliable message processing
-- decoupled service communication
-
----
-
-### Distributed Caching
-Demonstrates Redis integration for:
-
-- performance optimization
-- cache invalidation strategies
-- reducing database load
-
----
-
-### Audit Pipeline
-Demonstrates audit/event ingestion pipeline:
-
-- SQL Server → CDC → Debezium → Kafka
-- Kafka Consumer → MongoDB
-- event persistence for audit timelines
-
----
-
-### MongoDB Data Provider
-Demonstrates reusable MongoDB infrastructure including:
-
-- DI-friendly design
-- connection management
-- clean abstraction layer
-
----
-
-## Folder Structure
+AppService --> Redis[(Redis Cache)]
+AppService --> RabbitMQ[(RabbitMQ)]
